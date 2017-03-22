@@ -12,7 +12,7 @@ public class MinigameManager : MonoBehaviour {
 	public Text matchText;
 
 	private bool _init = false;
-	private int _matches = 13;
+	private int _matches = 8;
 
 	void Update () {
 		if (!_init)
@@ -25,7 +25,7 @@ public class MinigameManager : MonoBehaviour {
 
 	void initializeCards () {
 		for (int id = 0; id < 2; id++) {
-			for(int i = 1; i < 14; i++) {
+			for(int i = 1; i < 9; i++) {
 				bool test = false;
 				int choice = 0;
 				while (!test) {
@@ -64,18 +64,20 @@ public class MinigameManager : MonoBehaviour {
 				cardComparison (c);
 	}
 
-	void cardComparison (List <int> c) {
+	void cardComparison (List <int> c)
+	{
 		Card.DO_NOT = true;
 		int x = 0;
 
-		if (cards [c [0]].GetComponent<Card> ().cardValue == cards [c[1]].GetComponent<Card> ().cardValue) {
+		if (cards [c [0]].GetComponent<Card> ().cardValue == cards [c [1]].GetComponent<Card> ().cardValue) {
 			x = 2;
 			_matches--;
 			matchText.text = "Number of Matches: " + _matches;
-			if(_matches == 0)
-            pethunger.happiness += 35;
-            pethunger.savePet();
-            SceneManager.LoadScene ("Game");
+			if (_matches == 0) {
+				pethunger.happiness += 35;
+				pethunger.savePet ();
+				SceneManager.LoadScene ("Game");
+			}
             
 		}
 		for (int i = 0; i< c.Count; i++) {
