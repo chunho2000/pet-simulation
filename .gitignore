@@ -50,4 +50,7 @@ Temporary Items
 Library/metadata
 *.info
 Temp/UnityLockfile
-Temp/UnityLockfile
+Build
+Library/assetDatabase3
+*.dwlt
+Library/InspectorExpandedItems.asset

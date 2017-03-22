@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MenuManager : MonoBehaviour {
 
+	public GameObject pet;
 	public GameObject flashtext;
+	public GameObject namePanel;
+	public GameObject nameInput;
+	public GameObject NameText;
 
 	// Use this for initialization
 	void Start () {
@@ -12,9 +17,11 @@ public class MenuManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButtonUp(0))
+	void Update ()
+	{
+		if (Input.GetMouseButtonUp (0)) {
 			SceneManager.LoadScene ("game");
+		}
 	}
 	void flashTheText() {
 		if (flashtext.activeInHierarchy)
@@ -22,5 +29,14 @@ public class MenuManager : MonoBehaviour {
 		else
 			flashtext.SetActive (true);
 
+	}
+
+	public void triggerNamePanel (bool b){
+		namePanel.SetActive (!namePanel.activeInHierarchy);
+
+		if (b) {
+			pet.GetComponent<pethunger> ().name = nameInput.GetComponent<InputField> ().text;
+			PlayerPrefs.SetString ("name", pet.GetComponent<pethunger> ().name);
+		}
 	}
 }
