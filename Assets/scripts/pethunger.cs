@@ -41,8 +41,19 @@ public class pethunger : MonoBehaviour {
 			}
 		}
 	
-		if (hunger >= 100)
+		if (hunger >= 100) {
 			hunger = 100;
+		
+		}
+		if (happiness >= 100) {
+			happiness = 100;
+		}
+		if (_hunger < 0) {
+			_hunger = 0;
+		}
+		if (_happiness < 0) {
+			_happiness = 0;
+		}
 	}
 
     [ContextMenu("hjkhkl")]

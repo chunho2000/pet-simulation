@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\BarScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\pethunger.cs">
     <Files>
-      <File FileName="Assets\scripts\BarScript.cs" Line="14" Column="17" />
-      <File FileName="Assets\scripts\player.cs" Line="31" Column="1" />
-      <File FileName="Assets\scripts\stat.cs" Line="5" Column="1" />
-      <File FileName="Assets\scripts\pethunger.cs" Line="65" Column="50" />
-      <File FileName="Assets\scripts\HappinessBarStat.cs" Line="6" Column="30" />
-      <File FileName="Assets\scripts\HappinessBarPlayer.cs" Line="11" Column="3" />
+      <File FileName="Assets\scripts\BarScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\player.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\stat.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\pethunger.cs" Line="56" Column="4" />
+      <File FileName="Assets\scripts\HappinessBarStat.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\HappinessBarPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\HappinessBarScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
