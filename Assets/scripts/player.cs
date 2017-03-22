@@ -6,10 +6,13 @@ public class player : MonoBehaviour {
 
 	[SerializeField]
 	private stat hunger;
+	//[SerializeField]
+	//private stat happiness;
 	// Use this for initialization
 	private void Awake()
 	{
 		hunger.Initialize();
+		//happiness.Initialize ();
 	}
 	
 	// Update is called once per frame
@@ -23,7 +26,5 @@ public class player : MonoBehaviour {
 			hunger.CurrentVal += 10;
 		}
 	}
-	void link(){
-		
-	}
+
 }

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 [Serializable]
-public class stat 
+public class HappinessBarStat 
 {
 	[SerializeField]
-	private BarScript bar;
+	private HappinessBarScript bar;
 
-	[SerializeField]
 	private float maxVal = 100;
 	[SerializeField]
 	private float currentVal;
@@ -27,10 +26,10 @@ public class stat
 
 		}
 
-      }
+	}
 	public float MaxVal
 	{
-		
+
 		get
 		{
 			return maxVal;
@@ -53,4 +52,3 @@ public class stat
 		// this.CurrentVal.ToString ("0") = pethunger.hunger;
 	}
 }
-	
