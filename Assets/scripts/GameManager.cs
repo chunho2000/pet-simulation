@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour {
        
 		HappinessText.GetComponent<Text>().text =pethunger.happiness.ToString();
 
-        Debug.Log(pethunger.happiness.ToString());
 
         NameText.GetComponent<Text> ().text = pet.GetComponent<pethunger> ().name;
 

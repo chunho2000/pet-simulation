@@ -58,30 +58,35 @@ public class pethunger : MonoBehaviour {
 			PlayerPrefs.SetInt ("_hunger", _hunger);
 		} else {
 			_hunger = PlayerPrefs.GetInt ("_hunger");
+		}
+
 		if (!PlayerPrefs.HasKey ("_happiness")) {
-				_happiness = 100;
-				PlayerPrefs.SetInt ("_happiness", _happiness);
-			} else {
-				_happiness = PlayerPrefs.GetInt ("_happiness");}
+			_happiness = 100;
+			PlayerPrefs.SetInt ("_happiness", _happiness);
+		} else {
+			_happiness = PlayerPrefs.GetInt ("_happiness");
 		}
 			
 		TimeSpan ts = getTimeSpan ();
 		_hunger -= (int)(ts.TotalHours * 2);
-		if (_hunger < 0)
+
+		if (_hunger < 0) {
 			_hunger = 0;
+		}
 		_happiness-= (int)((100-_hunger) * (ts.TotalHours/5));
-		if (_happiness < 0)
+		if (_happiness < 0) {
 			_happiness = 0;
-
-		if(!PlayerPrefs.HasKey("then"))
-			PlayerPrefs.SetString("then",getStringTime());
-
+		}
+		if (!PlayerPrefs.HasKey ("then")) {
+			PlayerPrefs.SetString ("then", getStringTime ());
+		}
 		//Debug.Log (getTimeSpan ().ToString ());
 
-		if (_serverTime)
+		if (_serverTime) {
 			UpdateServer ();
-		else
+		} else {
 			InvokeRepeating ("UpdateDevice", 0f, 30f);
+		}
 
 	}
 	void UpdateServer() {

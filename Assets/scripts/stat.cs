@@ -10,7 +10,6 @@ public class stat
 
 	[SerializeField]
 	private float maxVal;
-
 	[SerializeField]
 	private float currentVal;
 
@@ -25,11 +24,13 @@ public class stat
 		{
 			this.currentVal = value;
 			bar.Value = currentVal;
+
 		}
 
       }
 	public float MaxVal
 	{
+		
 		get
 		{
 			return maxVal;
@@ -41,11 +42,15 @@ public class stat
 			bar.MaxValue = maxVal;
 		}
 
+
 	}
 	public void Initialize()
 	{
 		this.MaxVal = maxVal;
 		this.CurrentVal = currentVal;
+	}
+	void Update(){
+		// this.CurrentVal.ToString ("0") = pethunger.hunger;
 	}
 }
 	

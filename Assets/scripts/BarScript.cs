@@ -16,6 +16,7 @@ public class BarScript : MonoBehaviour {
 	public float MaxValue { get; set; }
 	public float Value {
 		set {
+			
 			fillAmount = Map (value, 0, MaxValue, 0, 1);
 		}
 	}
@@ -27,6 +28,8 @@ public class BarScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		HandleBar();
+		Debug.Log (pethunger.hunger.ToString ());
+		Value = pethunger.hunger;
 	}
 	private void HandleBar(){
 		content.fillAmount = Mathf.Lerp (content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
