@@ -47,5 +47,5 @@ Temporary Items
 .apdisk
 
 # Unity Files
-Temp
 Library/metadata
+*.info
